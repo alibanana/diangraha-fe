@@ -1,7 +1,7 @@
 // app/api/brands/[id]/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
-const BACKEND_URL = "http://103.103.20.23:8080/api";
+const BACKEND_URL = "https://diangraha-be-production.up.railway.app/api";
 
 export async function DELETE(request: NextRequest, context: any) {
   try {

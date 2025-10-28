@@ -48,7 +48,7 @@ function ClientForm({
   const fetchClientData = async (id: string) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://103.103.20.23:8080/api/clients`, {
+      const response = await fetch(`https://diangraha-be-production.up.railway.app/api/clients`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -61,7 +61,7 @@ function ClientForm({
           setPreviewUrl(
             client.imageUrl.startsWith("http")
               ? client.imageUrl
-              : `http://103.103.20.23:8080${client.imageUrl}`
+              : `https://diangraha-be-production.up.railway.app${client.imageUrl}`
           );
         }
       }
@@ -95,10 +95,10 @@ function ClientForm({
     try {
       const token = localStorage.getItem("token");
       const apiUrl = isEditMode
-        ? `http://103.103.20.23:8080/api/clients/${editId}?name=${encodeURIComponent(
+        ? `https://diangraha-be-production.up.railway.app/api/clients/${editId}?name=${encodeURIComponent(
             formData.name
           )}`
-        : `http://103.103.20.23:8080/api/clients?name=${encodeURIComponent(
+        : `https://diangraha-be-production.up.railway.app/api/clients?name=${encodeURIComponent(
             formData.name
           )}`;
 
