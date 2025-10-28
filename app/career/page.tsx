@@ -1,0 +1,142 @@
+"use client";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/Footer";
+
+
+export default function CareerPage() {
+  return (
+    <main className="bg-white">
+      <Navbar />
+      <section className="relative w-full h-[420px] md:h-[620px] flex items-center justify-center overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/career.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+      </video>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-10" />
+
+        {/* Centered Text */}
+        <div className="relative z-20 flex justify-center">
+          <span className="inline-block px-6 py-3 rounded-md text-white text-3xl md:text-4xl font-extrabold 
+                     bg-gradient-to-r from-indigo-29 to-violet-60 backdrop-blur-sm shadow-lg">
+            Join Us
+          </span>
+        </div>
+      </section>
+
+
+      {/* ===== WHY JOIN ===== */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-[28px] md:text-[30px] font-semibold text-gray-800 mb-4">
+            Why Join DGE?
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            At DGE, we strengthen innovation, professional growth, and collaboration. 
+            Be part of a team that takes pride in excellence and driving positive impact through every project
+          </p>
+        </div>
+      </section>
+
+      {/* ===== JOB CARDS ===== */}
+      <section className="pb-24">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/company/pt-dian-graha-elektrika/"
+            className="group bg-white border border-gray-200 rounded-xl p-8 text-center flex flex-col items-center
+                       shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              className="w-14 h-14 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-md"
+              style={{ backgroundColor: "#0A66C2" }}
+            >
+              in
+            </div>
+
+            <h3 className="mt-6 text-lg font-semibold text-gray-800">Linkedin</h3>
+            <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+              Explore job openings and connect with our team on Linkedln.
+            </p>
+
+            <span className="mt-6 text-indigo-600 group-hover:text-indigo-700 inline-flex items-center gap-1 text-sm font-medium">
+              View Job
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+
+          {/* DGE Career Hub */}
+          <a
+            href="https://recruitment.diangraha.com/"
+            className="group bg-white border border-gray-200 rounded-xl p-8 text-center flex flex-col items-center
+                      shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div className="w-14 h-14 rounded-full flex items-center justify-center text-white text-xl shadow-md bg-emerald-600">
+              👤
+            </div>
+
+            <h3 className="mt-6 text-lg font-semibold text-gray-800">DGE Career Hub</h3>
+            <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+              Apply directly through our dedicated career portal.
+            </p>
+
+            <span className="mt-6 text-indigo-600 group-hover:text-indigo-700 inline-flex items-center gap-1 text-sm font-medium">
+              View Job
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+
+          {/* JobStreet */}
+          <a
+            href="https://id.jobstreet.com/id/companies/dian-graha-elektrika-168555371921443/jobs"
+            className="group bg-white border border-gray-200 rounded-xl p-8 text-center flex flex-col items-center
+                       shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div className="w-14 h-14 rounded-full flex items-center justify-center text-white text-xl shadow-md bg-orange-500">
+              🔍
+            </div>
+
+            <h3 className="mt-6 text-lg font-semibold text-gray-800">JobStreet</h3>
+            <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            Explore available positions on JobStreet.
+            </p>
+
+            <span className="mt-6 text-indigo-600 group-hover:text-indigo-700 inline-flex items-center gap-1 text-sm font-medium">
+              View Job
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
