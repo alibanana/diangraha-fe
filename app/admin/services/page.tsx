@@ -555,7 +555,7 @@ export default function ServicesPage() {
         onConfirm={async () => {
           try {
             const token = localStorage.getItem("token");
-            await fetch(`http://103.103.20.23:8080/api/services/${deleteModal.serviceId}`, {
+            await fetch(`https://diangraha-be-production.up.railway.app/api/services/${deleteModal.serviceId}`, {
               method: "DELETE",
               headers: {
                 Accept: "*/*",
@@ -580,7 +580,7 @@ export default function ServicesPage() {
           try {
             const token = localStorage.getItem("token");
             await fetch(
-              `http://103.103.20.23:8080/api/services/sub-services/${deleteWorkModal.subServiceId}/works/${deleteWorkModal.workId}`,
+              `https://diangraha-be-production.up.railway.app/api/services/sub-services/${deleteWorkModal.subServiceId}/works/${deleteWorkModal.workId}`,
               {
                 method: "DELETE",
                 headers: {

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const BACKEND_URL = "http://103.103.20.23:8080/api";
+const BACKEND_URL = "https://diangraha-be-production.up.railway.app/api";
 
 // ⚡ FIX: hapus deklarasi type eksplisit di argumen ke-2
 export async function PUT(request: NextRequest, context: any) {
